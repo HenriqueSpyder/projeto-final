@@ -90,7 +90,7 @@ document.getElementById("login-form").onsubmit=function(e){
   var u=document.getElementById("login-user").value;
   var p=document.getElementById("login-pass").value;
   if(u==="henrivibe" && p==="vibecodas"){
-    currentUser={role:"admin",collab:COLLABS[0],name:"Henrique Vibe"};
+    currentUser={role:"admin",collab:null,name:"Henrique Vibe"};
     document.getElementById("login-screen").classList.remove("active");
     document.getElementById("login-screen").classList.add("hidden");
     document.getElementById("app-shell").classList.remove("hidden");
@@ -107,7 +107,7 @@ document.getElementById("login-form").onsubmit=function(e){
 };
 
 function login(role){
-  currentUser={role:role,collab:role==="collaborator"?COLLABS[0]:COLLABS[1],name:role==="admin"?"Administrador":role==="leader"?"Gustavo (Líder)":COLLABS[0].name};
+  currentUser={role:role,collab:role==="collaborator"?COLLABS[0]:null,name:role==="admin"?"Administrador":role==="leader"?"Gustavo (Líder)":COLLABS[0].name};
   document.getElementById("login-screen").classList.remove("active");
   document.getElementById("login-screen").classList.add("hidden");
   document.getElementById("app-shell").classList.remove("hidden");
