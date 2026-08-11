@@ -436,7 +436,7 @@ function pdfStyles(){
 }
 function pdfFooter(){
   var now=new Date();
-  return '<div class="footer">Placar da Agência — Relatório gerado em '+now.toLocaleDateString("pt-BR")+' às '+now.toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"})+'</div>';
+  return '<div class="footer">Prime Assembly — Relatório gerado em '+now.toLocaleDateString("pt-BR")+' às '+now.toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"})+'</div>';
 }
 function generateTeamPDF(teamId,week){
   var team=teamName(teamId);var tg=getTeamGoal(teamId,week);var tPts=getTeamPts(teamId);
@@ -485,8 +485,8 @@ function generateCollabPDF(collabId){
 }
 function generateAllPDF(){
   var now=new Date();var dateStr=now.toLocaleDateString("pt-BR");var timeStr=now.toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"});
-  var html='<html><head><meta charset="UTF-8"><title>Relatório Geral - Placar da Agência</title><style>'+pdfStyles()+'</style></head><body>';
-  html+='<h1>🏢 Relatório Geral — Placar da Agência</h1>';
+  var html='<html><head><meta charset="UTF-8"><title>Relatório Geral - Prime Assembly</title><style>'+pdfStyles()+'</style></head><body>';
+  html+='<h1>🏢 Relatório Geral — Prime Assembly</h1>';
   html+='<p><strong>Data:</strong> '+dateStr+' às '+timeStr+' | <strong>Total de colaboradores:</strong> '+COLLABS.filter(function(c){return c.active}).length+'</p>';
   html+='<h2>👥 Ranking por Equipe</h2><table><tr><th>Equipe</th><th>Membros</th><th>Pontos Totais</th></tr>';
   TEAMS.forEach(function(t){var m=COLLABS.filter(function(c){return c.teamId===t.id&&c.active});var pts=m.reduce(function(s,c){return s+c.pts},0);
