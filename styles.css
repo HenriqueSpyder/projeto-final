@@ -292,8 +292,8 @@ textarea{resize:vertical}
   .screen-section{padding:1rem;padding-bottom:5rem}
   .cards-grid{grid-template-columns:1fr}
   .podium-base{width:70px}
-  .podium-item:nth-child(1) .podium-base{height:80px}
-  .podium-item:nth-child(2) .podium-base{height:56px}
+  .podium-item:nth-child(1) .podium-base{height:60px}
+  .podium-item:nth-child(2) .podium-base{height:80px}
   .podium-item:nth-child(3) .podium-base{height:44px}
   .tv-body{flex-direction:column}
   .admin-toolbar-filters>*{min-width:100px}
